@@ -8,10 +8,7 @@ on:
       - "style.css"
       - "script.js"
       - "profile.jpg"
-      - "sih-dashboard.jpg"
-      - "attendance-manager.jpg"
-      - "student-result-system.jpg"
-      - "bank-account-system.jpg"
+      - "*.jpg"
       - "ai-study-assistant.jpg"
       - ".github/workflows/update-portfolio-preview.yml"
   workflow_dispatch:
