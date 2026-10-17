@@ -1,6 +1,6 @@
 # Shubh Dosi — Developer Portfolio
 
-A personal portfolio website created as a college project to introduce my background, learning journey, technical interests, and programming projects.
+A personal portfolio website created with Lovable as a college AI-class project to introduce my background, learning journey, technical interests, and programming projects.
 
 **Repository:** https://github.com/shubhdosi012/my-portfolio  
 **GitHub profile:** https://github.com/shubhdosi012  
@@ -11,7 +11,7 @@ A personal portfolio website created as a college project to introduce my backgr
 
 The website presents me as a B.Tech CSE (AI & ML) student at JECRC University. It is designed to make my work easy to explore and to provide one place for my projects, skills, learning progress, and contact links.
 
-The project was developed with an AI-assisted workflow and refined as a web development learning exercise. The repository currently contains a static frontend implemented with HTML, CSS, and JavaScript.
+Lovable was used as the AI-assisted website-building tool, and the project was refined as a web development learning exercise. The repository currently contains a static frontend implemented with HTML, CSS, and JavaScript.
 
 ## Website sections and interactions
 
