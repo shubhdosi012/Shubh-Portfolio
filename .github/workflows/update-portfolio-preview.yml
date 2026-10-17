@@ -81,12 +81,15 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Keep the freshly captured binary, then base the commit on the latest main.
+          cp portfolio-website.jpg /tmp/portfolio-website.jpg
+          git fetch origin main
+          git reset --hard origin/main
+          cp /tmp/portfolio-website.jpg portfolio-website.jpg
           git add portfolio-website.jpg
           if git diff --cached --quiet; then
             echo "Screenshot is already up to date."
             exit 0
           fi
           git commit -m "Refresh portfolio preview from the actual website"
-          # Source files may be updated while Chromium is capturing the page.
-          git pull --rebase origin main
           git push origin HEAD:main
