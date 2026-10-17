@@ -12,9 +12,8 @@ This is my original, self-built portfolio. It is separate from **Shubh Dosi Vers
 
 - **Home:** introduction and links to my work
 - **About:** academic background and learning interests
-- **Projects:** project cards and category filters
-- **Progress:** learning tracker
-- **Learning notes:** technical notes and milestones
+- **Projects:** project cards with links to the available source code
+- **Progress:** learning tracker with repository-based counts
 - **Contact:** GitHub, LinkedIn, and other contact links
 
 ## Built with
@@ -48,7 +47,7 @@ Open `index.html` in a browser or use VS Code Live Server.
 
 - Keep project links connected to their actual source repositories
 - Test accessibility, mobile layouts, and reduced-motion settings
-- Keep progress figures accurate and current
+- Refresh repository-based progress figures as practice work changes
 - Refresh the README preview whenever the website source changes
 
 ## Other projects
