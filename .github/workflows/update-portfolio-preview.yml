@@ -9,7 +9,6 @@ on:
       - "script.js"
       - "profile.jpg"
       - "*.jpg"
-      - "ai-study-assistant.jpg"
       - ".github/workflows/update-portfolio-preview.yml"
   workflow_dispatch:
 
