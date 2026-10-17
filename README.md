@@ -5,7 +5,9 @@ A personal portfolio website created with Lovable as a college AI-class project 
 **Repository:** https://github.com/shubhdosi012/my-portfolio  
 **GitHub profile:** https://github.com/shubhdosi012  
 **LinkedIn:** https://www.linkedin.com/in/shubh-dosi-575323311/  
-**Portfolio deployment:** Add the current live URL here when confirmed.
+**Portfolio deployment:** The live deployment URL has not yet been confirmed; use the source repository link above until it is verified.
+
+![Portfolio website preview](portfolio-website.jpg)
 
 ## Overview
 
