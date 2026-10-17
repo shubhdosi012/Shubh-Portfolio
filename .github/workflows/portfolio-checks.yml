@@ -1,0 +1,82 @@
+name: Portfolio checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  static-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Check JavaScript syntax
+        run: node --check script.js
+
+      - name: Validate local links and assets
+        run: |
+          python - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          from urllib.parse import urlparse
+
+          root = Path(".")
+          html_file = root / "index.html"
+          source = html_file.read_text(encoding="utf-8")
+
+          class PortfolioParser(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.ids = set()
+                  self.fragments = []
+                  self.assets = []
+
+              def handle_starttag(self, tag, attrs):
+                  attrs = dict(attrs)
+                  if attrs.get("id"):
+                      self.ids.add(attrs["id"])
+                  href = attrs.get("href", "")
+                  if href.startswith("#") and len(href) > 1:
+                      self.fragments.append(href[1:])
+                  if tag == "img" and attrs.get("src"):
+                      self.assets.append(attrs["src"])
+                  if tag == "script" and attrs.get("src"):
+                      self.assets.append(attrs["src"])
+                  if tag == "link" and attrs.get("rel") == "stylesheet" and href:
+                      self.assets.append(href)
+
+          parser = PortfolioParser()
+          parser.feed(source)
+          parser.close()
+
+          errors = []
+          for fragment in parser.fragments:
+              if fragment not in parser.ids:
+                  errors.append(f"Broken in-page link: #{fragment}")
+
+          for asset in parser.assets:
+              parsed = urlparse(asset)
+              if parsed.scheme or parsed.netloc or asset.startswith("data:"):
+                  continue
+              path = root / parsed.path
+              if not path.is_file():
+                  errors.append(f"Missing local asset: {asset}")
+
+          if errors:
+              print("\n".join(errors))
+              raise SystemExit(1)
+
+          print(f"Checked {len(parser.fragments)} in-page links and {len(parser.assets)} local asset references.")
+          PY
