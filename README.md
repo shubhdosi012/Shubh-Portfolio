@@ -1,68 +1,58 @@
-# Shubh Dosi — Personal Developer Portfolio
+# Shubh Dosi — Personal Portfolio
 
-My personal developer portfolio website, designed and built by me to present my background, learning journey, technical skills, and projects.
+My main personal portfolio website, designed and built by me with HTML, CSS, and JavaScript. It introduces my background, learning journey, and projects.
 
-**Repository:** https://github.com/shubhdosi012/my-portfolio  
-**GitHub profile:** https://github.com/shubhdosi012  
-**LinkedIn:** https://www.linkedin.com/in/shubh-dosi-575323311/
+![Screenshot of my personal portfolio website](portfolio-website.jpg)
 
-![Portfolio website preview](portfolio-website.jpg)
+## Overview
 
-## About this project
+This is my original, self-built portfolio. It is separate from **Shubh Dosi Verse** and **E-Commerce Inventory Management**, which are college AI-class projects created with Lovable.
 
-This is my own portfolio project, separate from my college AI-class projects made with Lovable. I built the website myself as a way to practise frontend development and present my work in one place.
+## Website sections
 
-The current repository contains a static frontend implemented with HTML, CSS, and JavaScript.
+- **Home:** introduction and links to my work
+- **About:** academic background and learning interests
+- **Projects:** project cards and category filters
+- **Progress:** learning tracker
+- **Learning notes:** technical notes and milestones
+- **Contact:** GitHub, LinkedIn, and other contact links
 
-## Website sections and interactions
+## Built with
 
-- **Home / hero:** introduction, profile image, animated text, and project/contact actions
-- **About:** academic background and learning goals
-- **Skills:** technologies and topics I am learning
-- **Projects:** project cards and project filtering
-- **Progress:** learning progress indicators
-- **Blog / learning notes:** space for technical learning notes
-- **Contact:** professional profile and contact links
-- **Responsive navigation:** mobile menu and section navigation
-- **Visual effects:** particle background, scroll reveal, count-up elements, and custom cursor on supported desktop screens
-
-## Technology stack
-
-- **HTML5** — page structure and content
-- **CSS3** — layout, styling, responsive design, transitions and animations
-- **JavaScript** — navigation, typed text, filters, counters and scroll effects
-- **Lucide icons** — interface icons
-- **Google Fonts** — typography
+- HTML5
+- CSS3
+- JavaScript
+- Lucide icons
+- Google Fonts
 
 ## Run locally
 
-No build step is required for the current static version.
-
-1. Clone the repository.
-2. Open `index.html` in a browser, or use the VS Code Live Server extension.
-3. Keep `style.css`, `script.js`, profile imagery, and project images alongside the HTML file.
+No build step is required.
 
 ```bash
 git clone https://github.com/shubhdosi012/my-portfolio.git
 cd my-portfolio
 ```
 
+Open `index.html` in a browser or use VS Code Live Server.
+
 ## What I practised
 
-- Building and organising a multi-section website
-- Responsive design and CSS layout
-- JavaScript DOM manipulation and event handling
-- Navigation and interactive UI behaviour
-- Animations and visual design
-- Presenting projects clearly with Git and GitHub
+- Structuring a multi-section website
+- Responsive CSS and layout
+- JavaScript event handling and DOM interactions
+- Filters, animations, and navigation
+- Version control and project documentation
 
-## Future improvements
+## Planned improvements
 
-- Add a verified live deployment URL when available
-- Link each project to its repository and demo
-- Check keyboard navigation, contrast, reduced-motion preferences and mobile layouts
-- Keep skills and progress claims accurate and up to date
+- Keep project links connected to their actual source repositories
+- Test accessibility, mobile layouts, and reduced-motion settings
+- Keep progress figures accurate and current
+- Refresh the README preview whenever the website source changes
 
-## Project note
+## Other projects
 
-This is my personally built portfolio project. My separate college AI-class projects built with Lovable are documented in their own repositories, including [E-Commerce Inventory Management](https://github.com/shubhdosi012/ecommerce-inventory-management) and [Shubh Dosi Verse](https://github.com/shubhdosi012/shubh-dosi-verse).
+- [E-Commerce Inventory Management](https://github.com/shubhdosi012/ecommerce-inventory-management) — college AI-class project built with Lovable
+- [Shubh Dosi Verse](https://github.com/shubhdosi012/shubh-dosi-verse) — separate college AI-class project built with Lovable
+- [C Programming Lab](https://github.com/shubhdosi012/C-Programming-Lab) — C and Python learning exercises
