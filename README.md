@@ -8,6 +8,9 @@ My main personal portfolio website, designed and built by me with HTML, CSS, and
 
 This is my original, self-built portfolio. It is separate from **Shubh Dosi Verse** and **E-Commerce Inventory Management**, which are college AI-class projects created with Lovable.
 
+- **Repository:** https://github.com/shubhdosi012/Shubh-Portfolio
+- **Website:** https://shubhdosi012.github.io/Shubh-Portfolio/
+
 ## Website sections
 
 - **Home:** introduction and links to my work
@@ -29,8 +32,8 @@ This is my original, self-built portfolio. It is separate from **Shubh Dosi Vers
 No build step is required.
 
 ```bash
-git clone https://github.com/shubhdosi012/my-portfolio.git
-cd my-portfolio
+git clone https://github.com/shubhdosi012/Shubh-Portfolio.git
+cd Shubh-Portfolio
 ```
 
 Open `index.html` in a browser or use VS Code Live Server.
@@ -52,6 +55,6 @@ Open `index.html` in a browser or use VS Code Live Server.
 
 ## Other projects
 
-- [E-Commerce Inventory Management](https://github.com/shubhdosi012/ecommerce-inventory-management) — college AI-class project built with Lovable
-- [Shubh Dosi Verse](https://github.com/shubhdosi012/shubh-dosi-verse) — separate college AI-class project built with Lovable
-- [C Programming Lab](https://github.com/shubhdosi012/C-Programming-Lab) — C and Python learning exercises
+- [E-Commerce Inventory Management](https://github.com/shubhdosi012/ecommerce-class-project) — college AI-class project built with Lovable
+- [Shubh Dosi Verse](https://github.com/shubhdosi012/shubh-class-project) — separate college AI-class project built with Lovable
+- [Programming Lab](https://github.com/shubhdosi012/Programming-Lab) — C and Python learning exercises
