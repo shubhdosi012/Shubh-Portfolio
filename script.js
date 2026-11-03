@@ -366,19 +366,34 @@ function initCountUp() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const counter = entry.target;
-                const target = parseInt(counter.dataset.count);
+                const target = Number(counter.dataset.count);
+
+                // Ignore missing, negative, or non-numeric counters instead of
+                // starting an interval that can never reach a valid value.
+                if (!Number.isFinite(target) || target < 0) {
+                    observer.unobserve(counter);
+                    return;
+                }
+
+                if (target === 0) {
+                    counter.textContent = '0';
+                    observer.unobserve(counter);
+                    return;
+                }
+
                 let current = 0;
-                const increment = Math.max(1, Math.floor(target / 40));
+                const steps = Math.min(40, Math.ceil(target));
+                const increment = target / steps;
                 const duration = 1500;
-                const stepTime = duration / (target / increment);
+                const stepTime = duration / steps;
 
                 const timer = setInterval(() => {
                     current += increment;
                     if (current >= target) {
-                        counter.textContent = target;
+                        counter.textContent = String(target);
                         clearInterval(timer);
                     } else {
-                        counter.textContent = current;
+                        counter.textContent = String(Math.floor(current));
                     }
                 }, stepTime);
 
